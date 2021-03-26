@@ -30,7 +30,7 @@ below. First, we can see that GUITool is 1.8-2.5 times faster than the
 GUI Layout Toolbox (GLT), moreover, comparing the runs for MATLAB
 2011a with 2019a it also clear that the MATLAB GUI functionality is
 currently 2-3 times slower with is also consistent with a previous
-[MATLAB GUI benchmark comparison](https://www.precisesimulation.com/blog/2019-08-20-benchmarking-and-performance-comparison-of-matlab-versions).
+[MATLAB GUI benchmark comparison](https://www.featool.com/news/2019/08/20/benchmarking-and-performance-comparison-of-matlab-versions).
 To really get good GUI performance we can therefore only recommend
 using the GUITool framework with older MATLAB versions.
 
