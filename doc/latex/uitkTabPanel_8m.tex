@@ -1,0 +1,38 @@
+\hypertarget{uitkTabPanel_8m}{}\section{src/uitk\+Tab\+Panel.m File Reference}
+\label{uitkTabPanel_8m}\index{src/uitk\+Tab\+Panel.\+m@{src/uitk\+Tab\+Panel.\+m}}
+
+
+\subsection{Description}
+U\+I\+T\+K\+T\+A\+B\+P\+A\+N\+EL Create an uitk panel with tabs. 
+
+H\+T\+A\+B\+P\+A\+N\+EL = U\+I\+T\+K\+T\+A\+B\+P\+A\+N\+E\+L() Creates a panel with tabs along the top edge to allow selection between the different tabs. The optional outputs are an uitk uipanel object handle H\+T\+A\+B\+P\+A\+N\+EL which can be used as a parent container for other nested uitk, uicontrol, and uipanel components.
+
+H\+T\+A\+B\+C\+T\+RL = U\+I\+T\+K\+T\+A\+B\+P\+A\+N\+EL( O\+BJ, S\+TR, P\+A\+R\+AM, V\+A\+L\+UE, ... ) Creates a new tab with title S\+TR and returns its handle H\+T\+A\+B\+C\+T\+RL and optionally updates the parameter value pairs of object with handle O\+BJ.
+
+Accepts the following parameter/value pairs. \begin{DoxyVerb}Property      Value/{Default}      Description
+-----------------------------------------------------------------------------------
+parent        handle               Handle to parent object
+tabsize       scalar {14}          Width of tab in pixels
+tabfontsize   scalar {14}          Font size of tab title
+\end{DoxyVerb}
+
+
+\begin{DoxyParagraph}{Example}
+\begin{DoxyVerb} fig = figure();
+ pnl = uitkTabPanel( <tt>Parent</tt>, fig );
+ p1 = uitkTabPanel( pnl, <tt>tab 1</tt> );
+ p2 = uitkTabPanel( pnl, <tt>tab 2</tt> );
+ p3 = uitkTabPanel( pnl, <tt>tab 3</tt> );
+ uicontrol( <tt>Style</tt>, <tt>frame</tt>, <tt>Parent</tt>, p1, <tt>Background</tt>, <tt>r</tt>, ...
+            <tt>Units</tt>, <tt>normalized</tt>, <tt>Position</tt>, [0 0 1 1] );
+ uicontrol( <tt>Style</tt>, <tt>frame</tt>, <tt>Parent</tt>, p2, <tt>Background</tt>, <tt>g</tt>, ...
+            <tt>Units</tt>, <tt>normalized</tt>, <tt>Position</tt>, [0 0 1 1] );
+ uicontrol( <tt>Style</tt>, <tt>frame</tt>, <tt>Parent</tt>, p3, <tt>Background</tt>, <tt>b</tt>, ...
+            <tt>Units</tt>, <tt>normalized</tt>, <tt>Position</tt>, [0 0 1 1] );
+ uitkRedraw( fig )
+\end{DoxyVerb}
+
+\end{DoxyParagraph}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{uitkHBox_8m_ab990346589290e115da86c10fd14b550}{uitk\+H\+Box}, \hyperlink{uitkVBox_8m_ac8da8c6783d59aaf13cea4dddda6c7c7}{uitk\+V\+Box}, \hyperlink{uitkGrid_8m_a6165522a4f35b3d7e5cf35ff39af2431}{uitk\+Grid}, and \hyperlink{uitkBoxPanel_8m_ad9e83ebdcaac25d3a7f00883a63ed9a1}{uitk\+Box\+Panel} 
+\end{DoxySeeAlso}

@@ -1,0 +1,35 @@
+\hypertarget{uitkBoxPanel_8m}{}\section{src/uitk\+Box\+Panel.m File Reference}
+\label{uitkBoxPanel_8m}\index{src/uitk\+Box\+Panel.\+m@{src/uitk\+Box\+Panel.\+m}}
+
+
+\subsection{Description}
+U\+I\+T\+K\+B\+O\+X\+P\+A\+N\+EL Show one element inside a box panel. 
+
+O\+BJ = U\+I\+T\+K\+B\+O\+X\+P\+A\+N\+E\+L() Creates a box-\/styled panel object with automatic management of the contained widget or layout. The properties available are largely the same as the builtin U\+I\+P\+A\+N\+EL object. The optional output is an uitk uipanel object handle which can be used as a parent container for other nested uitk, uicontrol, and uipanel components.
+
+O\+BJ = U\+I\+T\+K\+B\+O\+X\+P\+A\+N\+EL( P\+A\+R\+AM, V\+A\+L\+UE, ... ) Also sets one or more property values.
+
+O\+BJ = U\+I\+T\+K\+B\+O\+X\+P\+A\+N\+EL( O\+BJ, P\+A\+R\+AM, V\+A\+L\+UE, ... ) Updates the parameter value pairs of object uitk\+Grid object with handle O\+BJ.
+
+Accepts the following parameter/value pairs. \begin{DoxyVerb}Property            Value/{Default}      Description
+-----------------------------------------------------------------------------------
+parent              handle               Handle to parent object
+titletext           str {}               Panel title text
+titlefontname       str {arial}          Panel font
+titlefontsize       scalar {14}          Panel font size
+titlefontcolor      array {[.78 .86 1]}  Panel title color
+\end{DoxyVerb}
+
+
+\begin{DoxyParagraph}{Example}
+\begin{DoxyVerb} fig = figure();
+ pnl = uitkBoxPanel( <tt>Parent</tt>, fig, <tt>TitleText</tt>, <tt>A BoxPanel</tt> );
+ uicontrol( <tt>Style</tt>, <tt>frame</tt>, <tt>Parent</tt>, pnl, <tt>Background</tt>, <tt>r</tt>, ...
+            <tt>Units</tt>, <tt>normalized</tt>, <tt>Position</tt>, [0 0 1 1] )
+ uitkRedraw( fig )
+\end{DoxyVerb}
+
+\end{DoxyParagraph}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{uitkHBox_8m_ab990346589290e115da86c10fd14b550}{uitk\+H\+Box}, \hyperlink{uitkVBox_8m_ac8da8c6783d59aaf13cea4dddda6c7c7}{uitk\+V\+Box}, \hyperlink{uitkGrid_8m_a6165522a4f35b3d7e5cf35ff39af2431}{uitk\+Grid}, and \hyperlink{uitkTabPanel_8m_aa72efb55ff03f35b8037e206aac0e156}{uitk\+Tab\+Panel} 
+\end{DoxySeeAlso}

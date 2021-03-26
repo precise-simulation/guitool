@@ -1,0 +1,40 @@
+\hypertarget{test__vbox__1_8m}{}\section{src/tests/test\+\_\+vbox\+\_\+1.m File Reference}
+\label{test__vbox__1_8m}\index{src/tests/test\+\_\+vbox\+\_\+1.\+m@{src/tests/test\+\_\+vbox\+\_\+1.\+m}}
+
+
+\subsection{Description}
+T\+E\+S\+T\+\_\+\+V\+B\+O\+X\+\_\+1 Vertical box G\+UI layout test 1. 
+
+\begin{DoxyVerb} if( ~nargin )
+   uilib = 'uitk';
+ end
+
+ switch( uilib )
+
+   case 'uitk'
+     fig = figure('MenuBar','none','ToolBar','none');
+     vbox = uitkVBox( 'Parent', fig );
+     uicontrol( 'Parent', vbox, 'Background', 'r' )
+     uicontrol( 'Parent', vbox, 'Background', 'b' )
+     uicontrol( 'Parent', vbox, 'Background', 'g' )
+     uitkVBox( vbox, 'Sizes', [-1 100 -2], 'Spacing', 5 );
+     uitkRedraw( fig )
+
+   case 'uiextras'
+     fig = figure('MenuBar','none','ToolBar','none');
+     vbox = uiextras.VBox( 'Parent', fig );
+     uicontrol( 'Parent', vbox, 'Background', 'r' )
+     uicontrol( 'Parent', vbox, 'Background', 'b' )
+     uicontrol( 'Parent', vbox, 'Background', 'g' )
+     set( vbox, 'Sizes', [-1 100 -2], 'Spacing', 5 );
+
+   case 'uix'
+     fig = figure('MenuBar','none','ToolBar','none');
+     vbox = uix.VBox( 'Parent', fig );
+     uicontrol( 'Parent', vbox, 'Background', 'r' )
+     uicontrol( 'Parent', vbox, 'Background', 'b' )
+     uicontrol( 'Parent', vbox, 'Background', 'g' )
+     set( vbox, 'Heights', [-1 100 -2], 'Spacing', 5 );
+
+ end\end{DoxyVerb}
+ 

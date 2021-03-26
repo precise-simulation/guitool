@@ -1,0 +1,50 @@
+\hypertarget{uitkVBox_8m}{}\section{src/uitk\+V\+Box.m File Reference}
+\label{uitkVBox_8m}\index{src/uitk\+V\+Box.\+m@{src/uitk\+V\+Box.\+m}}
+
+
+\subsection{Description}
+U\+I\+T\+K\+V\+B\+OX Create/update uitk G\+UI container for a vertical single row layout. 
+
+O\+BJ = U\+I\+T\+K\+V\+B\+O\+X() Creates a new vertical box layout with all parameters set to default. The optional output is an uitk uipanel object handle which can be used as a parent container for other nested uitk, uicontrol, and uipanel components.
+
+O\+BJ = U\+I\+T\+K\+V\+B\+OX( P\+A\+R\+AM, V\+A\+L\+UE, ... ) Creates a new vertical box layout and sets one or more parameter values.
+
+O\+BJ = U\+I\+T\+K\+V\+B\+OX( O\+BJ, P\+A\+R\+AM, V\+A\+L\+UE, ... ) Updates the parameter value pairs of object uitk\+V\+Box object with handle O\+BJ.
+
+Accepts the following parameter/value pairs. \begin{DoxyVerb}Property      Value/{Default}      Description
+-----------------------------------------------------------------------------------
+parent        handle               Handle to parent object
+padding       scalar/array {0}     (Horizontal/vertical) pixel size of border
+spacing       scalar/array {0}     (Row/column) pixel spacing between elements
+sizes         scalar {-1}          Prescribed row pixel sizes (or ratio if <0)
+minimumsizes  scalar  {0}          Minimum pixel size of rows
+\end{DoxyVerb}
+
+
+\begin{DoxyParagraph}{Example 1}
+\begin{DoxyVerb} fig = figure();
+ vbox = uitkVBox( <tt>Parent</tt>, fig );
+ uicontrol( <tt>Parent</tt>, vbox, <tt>Background</tt>, <tt>r</tt> )
+ uicontrol( <tt>Parent</tt>, vbox, <tt>Background</tt>, <tt>b</tt> )
+ uicontrol( <tt>Parent</tt>, vbox, <tt>Background</tt>, <tt>g</tt> )
+ uitkVBox( vbox, <tt>Sizes</tt>, [-1 100 -2], <tt>Spacing</tt>, 5 );
+ uitkRedraw( fig )
+\end{DoxyVerb}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Example 2}
+\begin{DoxyVerb} fig = figure();
+ vbox = uitkVBox( <tt>Parent</tt>, fig );
+ hbox = uitkHBox( <tt>Parent</tt>, vbox );
+ uicontrol( <tt>Parent</tt>, hbox, <tt>String</tt>, <tt>Button 1</tt> )
+ uicontrol( <tt>Parent</tt>, hbox, <tt>String</tt>, <tt>Button 2</tt> )
+ uitkHBox( hbox, <tt>Sizes</tt>, [-1 -1] );
+ uicontrol( <tt>Style</tt>, <tt>frame</tt>, <tt>Parent</tt>, vbox, <tt>Background</tt>, <tt>b</tt> )
+ uitkVBox( vbox, <tt>Sizes</tt>, [100 -1] );
+ uitkRedraw( fig )
+\end{DoxyVerb}
+
+\end{DoxyParagraph}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{uitkHBox_8m_ab990346589290e115da86c10fd14b550}{uitk\+H\+Box}, \hyperlink{uitkGrid_8m_a6165522a4f35b3d7e5cf35ff39af2431}{uitk\+Grid}, \hyperlink{uitkBoxPanel_8m_ad9e83ebdcaac25d3a7f00883a63ed9a1}{uitk\+Box\+Panel}, and \hyperlink{uitkTabPanel_8m_aa72efb55ff03f35b8037e206aac0e156}{uitk\+Tab\+Panel} 
+\end{DoxySeeAlso}

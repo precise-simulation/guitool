@@ -1,0 +1,42 @@
+\hypertarget{uitkGrid_8m}{}\section{src/uitk\+Grid.m File Reference}
+\label{uitkGrid_8m}\index{src/uitk\+Grid.\+m@{src/uitk\+Grid.\+m}}
+
+
+\subsection{Description}
+U\+I\+T\+K\+G\+R\+ID Arrange G\+UI elements in a grid layout. 
+
+O\+BJ = U\+I\+T\+K\+G\+R\+I\+D() Creates a new new grid layout with all properties set to defaults. The number of rows and columns to use is determined from the number of elements in the Row\+Sizes and Column\+Sizes properties respectively. Child elements are arranged down column one first, then column two etc. The optional output is an uitk uipanel object handle which can be used as a parent container for other nested uitk, uicontrol, and uipanel components.
+
+O\+BJ = U\+I\+T\+K\+G\+R\+ID( P\+A\+R\+AM, V\+A\+L\+UE, ... ) Creates a new grid box layout and sets one or more parameter values.
+
+O\+BJ = U\+I\+T\+K\+G\+R\+ID( O\+BJ, P\+A\+R\+AM, V\+A\+L\+UE, ... ) Updates the parameter value pairs of object uitk\+Grid object with handle O\+BJ.
+
+Accepts the following parameter/value pairs. \begin{DoxyVerb}Property            Value/{Default}   Description
+-----------------------------------------------------------------------------------
+parent              handle            Handle to parent object
+padding             scalar/array {0}  (Horizontal/vertical) pixel size of border
+spacing             scalar/array {0}  (Row/column) pixel spacing between elements
+rowsizes            scalar {-1}       Prescribed pixel row sizes (or ratio if <0)
+minimumrowsizes     scalar  {0}       Minimum pixel size of rows
+columnsizes         scalar {-1}       Prescribed pixel col sizes (or ratio if <0)
+minimumcolumnsizes  scalar  {0}       Minimum pixel size of columns
+\end{DoxyVerb}
+
+
+\begin{DoxyParagraph}{Example}
+\begin{DoxyVerb} fig = figure();
+ grd = uitkGrid( <tt>Parent</tt>, fig, <tt>Spacing</tt>, 5 );
+ uicontrol( <tt>Style</tt>, <tt>frame</tt>, <tt>Parent</tt>, grd, <tt>Background</tt>, <tt>r</tt> )
+ uicontrol( <tt>Style</tt>, <tt>frame</tt>, <tt>Parent</tt>, grd, <tt>Background</tt>, <tt>b</tt> )
+ uicontrol( <tt>Style</tt>, <tt>frame</tt>, <tt>Parent</tt>, grd, <tt>Background</tt>, <tt>g</tt> )
+ uipanel(   <tt>Parent</tt>, grd, <tt>BorderType</tt>, <tt>none</tt> )   % Empty container.
+ uicontrol( <tt>Style</tt>, <tt>frame</tt>, <tt>Parent</tt>, grd, <tt>Background</tt>, <tt>c</tt> )
+ uicontrol( <tt>Style</tt>, <tt>frame</tt>, <tt>Parent</tt>, grd, <tt>Background</tt>, <tt>y</tt> )
+ uitkGrid( grd, <tt>ColumnSizes</tt>, [-1 100 -2], <tt>RowSizes</tt>, [-1 100] );
+ uitkRedraw( fig )
+\end{DoxyVerb}
+
+\end{DoxyParagraph}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{uitkHBox_8m_ab990346589290e115da86c10fd14b550}{uitk\+H\+Box}, \hyperlink{uitkVBox_8m_ac8da8c6783d59aaf13cea4dddda6c7c7}{uitk\+V\+Box}, \hyperlink{uitkBoxPanel_8m_ad9e83ebdcaac25d3a7f00883a63ed9a1}{uitk\+Box\+Panel}, and \hyperlink{uitkTabPanel_8m_aa72efb55ff03f35b8037e206aac0e156}{uitk\+Tab\+Panel} 
+\end{DoxySeeAlso}

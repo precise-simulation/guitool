@@ -1,0 +1,37 @@
+\hypertarget{runTestSuite_8m}{}\section{run\+Test\+Suite.\+m File Reference}
+\label{runTestSuite_8m}\index{run\+Test\+Suite.\+m@{run\+Test\+Suite.\+m}}
+
+
+\subsection{Description}
+R\+U\+N\+T\+E\+S\+T\+S\+U\+I\+TE Run G\+UI Toolkit test suite. 
+
+R\+U\+N\+T\+E\+S\+T\+S\+U\+I\+T\+E() Runs and checks the examples in the tests directory. \begin{DoxyVerb}Property    Value/{Default}           Description
+-----------------------------------------------------------------------------------
+uilib       string  {uitk}            GUI library to use uitk, uiextras, uix
+testdir     string  {src/tests}       Test source directory
+nruns       integer {1}               Number of times to run each test case
+closef      logical {false}           Close figures after each test run
+pause       double  {1}               Pause after each test case
+\end{DoxyVerb}
+
+
+\begin{DoxyParagraph}{Example 1 -\/ Run tests for G\+UI Layout Toolbox $>$=v2.0}
+\begin{DoxyVerb} close all
+ runTestSuite(<tt>nruns</tt>,20,<tt>closef</tt>,true,<tt>pause</tt>,0)
+\end{DoxyVerb}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Example 2 -\/ Run tests 20 times for default uitk G\+UI library}
+\begin{DoxyVerb} runTestSuite(<tt>nruns</tt>,20,<tt>closef</tt>,true,<tt>pause</tt>,0)
+\end{DoxyVerb}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Example 3 -\/ Run tests for G\+UI Layout Toolbox $<$=v1.17}
+\begin{DoxyVerb} runTestSuite(<tt>uilib</tt>,<tt>uiextras</tt>)
+\end{DoxyVerb}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Example 4 -\/ Run tests for G\+UI Layout Toolbox $>$=v2.0}
+\begin{DoxyVerb} runTestSuite(<tt>uilib</tt>,<tt>uix</tt>)\end{DoxyVerb}
+
+\end{DoxyParagraph}

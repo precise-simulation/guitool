@@ -1,0 +1,46 @@
+\hypertarget{test__vbox__2_8m}{}\section{src/tests/test\+\_\+vbox\+\_\+2.m File Reference}
+\label{test__vbox__2_8m}\index{src/tests/test\+\_\+vbox\+\_\+2.\+m@{src/tests/test\+\_\+vbox\+\_\+2.\+m}}
+
+
+\subsection{Description}
+T\+E\+S\+T\+\_\+\+V\+B\+O\+X\+\_\+2 Vertical box G\+UI layout test 2. 
+
+\begin{DoxyVerb} if( ~nargin )
+   uilib = 'uitk';
+ end
+
+ switch( uilib )
+
+   case 'uitk'
+     fig = figure('MenuBar','none','ToolBar','none');
+     vbox = uitkVBox( 'Parent', fig );
+     hbox = uitkHBox( 'Parent', vbox );
+     uicontrol( 'Parent', hbox, 'String', 'Button 1' )
+     uicontrol( 'Parent', hbox, 'String', 'Button 2' )
+     uitkHBox( hbox, 'Sizes', [-1 -1] );
+     uicontrol( 'Style', 'frame', 'Parent', vbox, 'Background', 'b' )
+     uitkVBox( vbox, 'Sizes', [100 -1] );
+     uitkRedraw( fig )
+
+   case 'uiextras'
+     fig = figure('MenuBar','none','ToolBar','none');
+     vbox = uiextras.VBox( 'Parent', fig );
+     hbox = uiextras.HBox( 'Parent', vbox );
+     uicontrol( 'Parent', hbox, 'String', 'Button 1' )
+     uicontrol( 'Parent', hbox, 'String', 'Button 2' )
+     set( hbox, 'Sizes', [-1 -1] );
+     uicontrol( 'Style', 'frame', 'Parent', vbox, 'Background', 'b' )
+     set( vbox, 'Sizes', [100 -1] );
+
+   case 'uix'
+     fig = figure('MenuBar','none','ToolBar','none');
+     vbox = uix.VBox( 'Parent', fig );
+     hbox = uix.HBox( 'Parent', vbox );
+     uicontrol( 'Parent', hbox, 'String', 'Button 1' )
+     uicontrol( 'Parent', hbox, 'String', 'Button 2' )
+     set( hbox, 'Widths', [-1 -1] );
+     uicontrol( 'Style', 'frame', 'Parent', vbox, 'Background', 'b' )
+     set( vbox, 'Heights', [100 -1] );
+
+ end\end{DoxyVerb}
+ 

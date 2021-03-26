@@ -1,0 +1,31 @@
+\hypertarget{test__boxpanel__1_8m}{}\section{src/tests/test\+\_\+boxpanel\+\_\+1.m File Reference}
+\label{test__boxpanel__1_8m}\index{src/tests/test\+\_\+boxpanel\+\_\+1.\+m@{src/tests/test\+\_\+boxpanel\+\_\+1.\+m}}
+
+
+\subsection{Description}
+T\+E\+S\+T\+\_\+\+B\+O\+X\+P\+A\+N\+E\+L\+\_\+1 Box panel G\+UI layout test. 
+
+\begin{DoxyVerb} if( ~nargin )
+   uilib = 'uitk';
+ end
+
+ switch( uilib )
+
+   case 'uitk'
+     fig = figure('MenuBar','none','ToolBar','none');
+     pnl = uitkBoxPanel( 'Parent', fig, 'TitleText', 'A BoxPanel' );
+     uicontrol( 'Style', 'frame', 'Parent', pnl, 'Background', 'r', ...
+                'Units', 'normalized', 'Position', [0 0 1 1] )
+     uitkRedraw( fig )
+
+   case 'uiextras'
+     fig = figure('MenuBar','none','ToolBar','none');
+     pnl = uiextras.BoxPanel( 'Parent', fig, 'Title', 'A BoxPanel' );
+     uicontrol( 'Style', 'frame', 'Parent', pnl, 'Background', 'r' )
+
+   case 'uix'
+     fig = figure('MenuBar','none','ToolBar','none');
+     pnl = uix.BoxPanel( 'Parent', fig, 'Title', 'A BoxPanel' );
+     uicontrol( 'Style', 'frame', 'Parent', pnl, 'Background', 'r' )
+ end\end{DoxyVerb}
+ 
